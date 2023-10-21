@@ -37,7 +37,7 @@ $ node index.js
 | Captcha Detection ( Recode your own if you can bypass captcha ) | ✅ |
 | Custom Mail Domain | ✅ |
 | Custom password | ✅ |
-| Captcha Bypass | ✅ |
+| Captcha Bypass | 😔 |
 
 ## Authors
 
