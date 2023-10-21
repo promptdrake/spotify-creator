@@ -1,20 +1,46 @@
-# spotify-account-creator
-WORK FOR WINDOW ONLY AND HAVE NODEJS INSTALLED
-ANDROID SOON
 
-```bash
-$ git clone https://github.com/promptdrake/spotify-account-creator
-$ cd spotify-account-creator
+## Spotify Account auto create 🚀
+
+Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, kamu bisa membuat 1 atau 1000 akun mungkin dalam sekejap
+
+
+![App Screenshot](https://github.com/promptdrake/spotify-creator/blob/main/sekrinsut.png?raw=true)
+
+
+## FAQ
+
+#### 1. Apakah bisa error?
+
+Tentu, biasanya error di email fill kalok semisal stuck gamuncul password answer klik ```ctrl + c```
+
+#### 2. Apakah ini benar benar gratis?
+
+Ya ini gratis kalok kamu ngeliat ada yang jual script mirip sama persis kayak yang ada di repository ini, silahkan report ke [sini](https://t.me/penyukaberuang)
+
+#### 3. Kenapa script ini Stuck di captcha?
+karena script ini tidak memiliki cara untuk bypass captcha, kami sudah menyari di seluruh stackoverflow bahwa bypass captcha perlu paid (mungkin)
+#### 🛠 How to install
+```
+$ git clone https://github.com/promptdrake/spotify-creator/
+$ cd spotify-creator
 $ npm i
 $ node index.js
 ```
 
-yang jual kode kayak gini di manapun dan bentuknya sama persis kayak ini, report ke gw, ntar vingral cuy
+## Featured
+| Featured       | Avaible |
+| :-------- | ------------------------- |
+| Less lag because in nodejs | ✅ |
+| Telegram Sender Logger | ✅ |
+| Auto Save result in result.txt | ✅ |
+| Bulk Creation | ✅ |
+| Captcha Detection ( Recode your own if you can bypass captcha ) | ✅ |
+| Custom Mail Domain | ✅ |
+| Custom password | ✅ |
+| Captcha Bypass | ✅ |
 
-## info
-kalok error cukup close tab browsernya terus run node index.js lagi
+## Authors
 
-<b>INI ADALAH SCRIPT GRATIS KAMU DILARANG MENJUAL SCRIPT INI DENGAN HARGA YANG MAHAL</b>
+- [@promptdrake](https://www.github.com/promptdrake)
+- [@aisbirkoenz](https://t.me/aisbirkoenz)
 
-### Update
-ip gw keleak di gambar commit jadi ini repo baru gw repo lama ku delete
