@@ -3,6 +3,8 @@
 
 Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, kamu bisa membuat 1 atau 1000 akun mungkin dalam sekejap
 
+<b>MEMBUTUHKAN NODEJS YANG TERINSTALL DI PC KAMU, CARI NODEJS DI GOOGLE LALU DOWNLOAD FILE MSI NYA</b>
+
 
 ![App Screenshot](https://github.com/promptdrake/spotify-creator/blob/main/sekrinsut.png?raw=true)
 
