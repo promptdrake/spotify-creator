@@ -40,6 +40,7 @@ const userAgentsList = Array.from({ length: 10 }, () => new userAgents());
     
     console.log(chalk.green(userAgent));
     const enterEmailAndSubmit = async (email) => {
+      await page.waitForTimeout(2000);
       console.log(chalk.blue('[Server] ') + 'Email: ' + email);
       await page.type('input#username', email);
       await page.waitForTimeout(2000); 
