@@ -1,6 +1,11 @@
 
 ## Spotify Account auto create 🚀
-
+Use at own risk
+<br>
+lo yang make, lo yang dosa
+<br>
+aku cuma coba bikin projek gabut doang
+<br>
 Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, kamu bisa membuat 1 atau 1000 akun mungkin dalam sekejap
 
 <b>MEMBUTUHKAN NODEJS YANG TERINSTALL DI PC KAMU, CARI NODEJS DI GOOGLE LALU DOWNLOAD FILE MSI NYA</b>
@@ -46,3 +51,6 @@ $ node index.js
 - [@promptdrake](https://www.github.com/promptdrake)
 - [@aisbirkoenz](https://t.me/aisbirkoenz)
 
+### Information
+For education purpose, kami tidak akan tanggung jawab jika sesuatu telah terjadi kepada repository ini atau mengatas namakan aisbircubes llc
+<br>jika kamu menyalah gunakan script ini, tanggung resikomu sendiri
