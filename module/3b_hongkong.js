@@ -29,7 +29,7 @@ async function createSpotifyAccount(line) {
   const [email, password] = line.split(' | ');
 
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: false,
     args: [
       '--disable-web-security',
       '--disable-features=IsolateOrigins,site-per-process',
