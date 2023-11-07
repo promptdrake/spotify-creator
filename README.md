@@ -12,7 +12,7 @@ Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, 
 
 
 ![App Screenshot](https://github.com/promptdrake/spotify-creator/blob/main/sekrinsut.png?raw=true)
-
+<b>Get User Apikey [Here](https://t.me/mindpastebot) lalu ketik /pm</b>
 
 ## FAQ
 
