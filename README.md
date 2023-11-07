@@ -1,6 +1,6 @@
 
 ## Spotify Account auto create 🚀
-Use at own risk
+Use at own risk, Hanya untuk user pc
 <br>
 lo yang make, lo yang dosa
 <br>
