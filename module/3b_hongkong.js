@@ -29,7 +29,7 @@ async function createSpotifyAccount(line) {
   const [email, password] = line.split(' | ');
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: "new",
     args: [
       '--disable-web-security',
       '--disable-features=IsolateOrigins,site-per-process',
@@ -37,7 +37,7 @@ async function createSpotifyAccount(line) {
   });
   const page = await browser.newPage();
   await page.setUserAgent(
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0'
+    config.browser.autopay
   );
   await page.setExtraHTTPHeaders({
     'Accept-Language': 'en',
@@ -59,9 +59,25 @@ async function createSpotifyAccount(line) {
   await page.click('button[id="login-button"]');
   await page.waitForTimeout(3000);
   if (page.url().includes('challenge.spotify.com')) {
-    console.log(chalk.yellow('[Server] ') + 'CAPTCHA challenge detected, try restarting your IP address');
-    browser.close();
-    return;
+    console.log(chalk.yellow('[Server] ') + 'CAPTCHA challenge detected, Bypassing...');
+    await page.waitForTimeout(5000);
+    const frames = page.frames();
+    let recaptchaFrame;
+    for (const frame of frames) {
+      if (frame.url().startsWith('https://www.google.com/recaptcha')) {
+        recaptchaFrame = frame;
+        break;
+      }
+    }
+    if (recaptchaFrame) {
+      await recaptchaFrame.waitForSelector('div.rc-anchor-content');
+      const captchaContent = await recaptchaFrame.$('div.rc-anchor-content');
+      await captchaContent.click();
+    } else {
+      console.error('reCAPTCHA frame not found');
+    }
+    await page.waitForTimeout(5000);
+    await page.click('button[name="solve"]');
   }
 
   let retryCount = 0;

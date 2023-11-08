@@ -22,18 +22,19 @@ const userAgentsList = Array.from({ length: 10 }, () => new userAgents());
     const browser = await puppeteer.launch({
       headless: false,
       args: [
-        /*`--user-agent=${userAgentsList[Math.floor(Math.random() * userAgentsList.length)].toString()}`,*/
+       /*`--user-agent=${userAgentsList[Math.floor(Math.random() * userAgentsList.length)].toString()}`,*/
         '--disable-web-security',
         '--disable-features=IsolateOrigins,site-per-process'/*,
-        `--load-extension=${path.resolve(__dirname, 'captcha')}`*/ // Replace with the actual path to your CRX file
+        `--load-extension=${path.resolve(__dirname, 'captcha_solver')}`*/
       ],
     });
     const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0');
+    await page.setUserAgent(
+      config.browser.create_account
+    );
     await page.setExtraHTTPHeaders({
       'Accept-Language': 'en'
     });
-    await page.setViewport({ width: 1080, height: 1024 });
     const userAgent = await page.evaluate(() => {
       return navigator.userAgent;
     });
@@ -73,7 +74,7 @@ const userAgentsList = Array.from({ length: 10 }, () => new userAgents());
     await page.waitForSelector('input#new-password');
     console.log(chalk.blue('[Server] ') +'Password: ' + config.password);
     await page.type('input#new-password', config.password);
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(2500);
     await page.click('button[data-testid="submit"]');
     await page.waitForSelector('input#displayName');
     await page.type('input#displayName', username);
@@ -96,8 +97,47 @@ const userAgentsList = Array.from({ length: 10 }, () => new userAgents());
     console.log(chalk.red('[Server] ') +'Security Checking Please wait a sec...');
     await page.waitForTimeout(7000);
     if (page.url().includes('challenge.spotify.com')) {
-      console.log(chalk.yellow('[Server] ') + 'CAPTCHA challenge detected, try restarting your ip address');
-browser.close()
+      console.log(chalk.yellow('[Server] ') + 'CAPTCHA challenge detected, Trying Bypassing...');
+      await page.waitForTimeout(5000);
+      const frames = page.frames();
+      let recaptchaFrame;
+      for (const frame of frames) {
+        if (frame.url().startsWith('https://www.google.com/recaptcha')) {
+          recaptchaFrame = frame;
+          break;
+        }
+      }
+      if (recaptchaFrame) {
+        await recaptchaFrame.waitForSelector('div.rc-anchor-content');
+        const captchaContent = await recaptchaFrame.$('div.rc-anchor-content');
+        await captchaContent.click();
+      } else {
+        console.error('reCAPTCHA frame not found');
+      }
+      await page.waitForTimeout(5000);
+      await page.click('button[name="solve"]');
+      await page.waitForTimeout(7000);
+      const currentDate = new Date();
+      const options = { day: 'numeric', month: 'long',year: 'numeric'  };
+      const locale = 'id-ID';
+      const date = currentDate.toLocaleDateString(locale, options);
+      const ipaddress = await getUserIpAddress();
+        const region = await getLocationInfo(ipaddress);
+        
+            const resultContent = `\n${email} | ${config.password}`;
+            fs.appendFileSync('result.txt', resultContent);
+              const message = `(+) New Account Spotify Created\nRegion: ${region}\n\nEmail: \`\`${email} (!)\`\`\nPassword: \`\`${config.password}\`\`\n\nCreated in ${date}`;  
+              const response = await axios.post(
+                `https://api.telegram.org/bot${config.bot_token}/sendMessage`,
+                {
+                  chat_id: config.owner_chatid,
+                  text: message,
+                  parse_mode: 'Markdown',
+                }
+              );
+            console.log(chalk.blue('[Server] ') + chalk.green('All done. The result is saving in result.txt'));
+            await browser.close();
+        console.log(chalk.blue('[Server] ') + 'Browser closed.');
     } else {
       const currentDate = new Date();
 const options = { day: 'numeric', month: 'long',year: 'numeric'  };
@@ -157,10 +197,10 @@ async function askUserCount() {
     });
   }
   async function getLocationInfo(ipAddress) {
-    const apiUrl = `https://ipapi.co/${ipAddress}/json/`;
+    const apiUrl = `http://ip-api.com/json/${ipAddress}`;
     try {
       const response = await axios.get(apiUrl);
-      return response.data.country_name;
+      return response.data.country;
     } catch (error) {
       console.error('Error retrieving location information:', error);
       return 'oof'; 
