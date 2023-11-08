@@ -11,7 +11,7 @@ module.exports = {
         "1b": "" // Enter Hongkong Link use sg-en languange for better example spotify.com/sg-en/offer-link
     },
     "retry_count": 3, // retry count if declined
-    "aisbircube_apikey": "aisbir_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", // type /getuserapi to @mindpastebot - https://t.me/mindpastebot
+    "aisbircube_apikey": "", // type /getuserapi to @mindpastebot - https://t.me/mindpastebot
     "browser": { 
         "create_account": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/114.0.5735.124 Mobile/15E148 Safari/604.1", // jangan diubah jika tidak tau
         "autopay": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" // jangan diubah jika tidak tau
