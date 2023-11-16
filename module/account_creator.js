@@ -21,6 +21,7 @@ const userAgentsList = Array.from({ length: 10 }, () => new userAgents());
     console.log('[Server] Name Found ' + username);
     const browser = await puppeteer.launch({
       headless: false,
+      executablePath: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
       args: [
        /*`--user-agent=${userAgentsList[Math.floor(Math.random() * userAgentsList.length)].toString()}`,*/
         '--disable-web-security',
