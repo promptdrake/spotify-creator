@@ -9,8 +9,6 @@ aku cuma coba bikin projek gabut doang
 <br>
 Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, kamu bisa membuat 1 atau 1000 akun mungkin dalam sekejap
 <br>
-Yang hasilin vcc hasil carding semoga storenya sepi
-<br>
 ``
 Barangsiapa yang mengambil barang orang lain karena terpaksa untuk menghilangkan lapar dan tidak terus- menerus, maka tidak dijatuhkan hukuman kepadanya. Dan barangsiapa mengambil sesuatu barang, sedang ia tidak membutuhkannya dan tidak untuk menghilangkan lapar, maka wajib atasnya mengganti barang tersebut dengan yang serupa dan diberikan hukuman ta’zir. Dan barangsiapa mengambil sesuatu barang sedangkan ia tidak dalam keadaan membutuhkan, dengan sembunyi-sembunyi setelah diletaknya di tempat penyimpanannya atau dijaga oleh penjaga, kemudian nilainya  seharga perisai maka wajib atasnya dihukum potong tangan.” (HR. Abu Daud).
 ``
