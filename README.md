@@ -1,5 +1,6 @@
 
 ## Spotify Account auto create 🚀
+<h1>DISCONTINUED</h1>
 Use at own risk, Hanya untuk user pc
 <br>
 lo yang make, lo yang dosa
