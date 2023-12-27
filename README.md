@@ -1,17 +1,9 @@
 
 ## Spotify Account auto create 🚀
-# DISCONTINUED
-Use at own risk, Hanya untuk user pc
-<br>
-lo yang make, lo yang dosa
-<br>
 aku cuma coba bikin projek gabut doang
 <br>
 Script ini bertujuan untuk membuat akun spotify sebanyak mungkin yang kamu mau, kamu bisa membuat 1 atau 1000 akun mungkin dalam sekejap
 <br>
-``
-Barangsiapa yang mengambil barang orang lain karena terpaksa untuk menghilangkan lapar dan tidak terus- menerus, maka tidak dijatuhkan hukuman kepadanya. Dan barangsiapa mengambil sesuatu barang, sedang ia tidak membutuhkannya dan tidak untuk menghilangkan lapar, maka wajib atasnya mengganti barang tersebut dengan yang serupa dan diberikan hukuman ta’zir. Dan barangsiapa mengambil sesuatu barang sedangkan ia tidak dalam keadaan membutuhkan, dengan sembunyi-sembunyi setelah diletaknya di tempat penyimpanannya atau dijaga oleh penjaga, kemudian nilainya  seharga perisai maka wajib atasnya dihukum potong tangan.” (HR. Abu Daud).
-``
 
 <b>MEMBUTUHKAN NODEJS YANG TERINSTALL DI PC KAMU, CARI NODEJS DI GOOGLE LALU DOWNLOAD FILE MSI NYA</b>
 
@@ -52,8 +44,8 @@ $ node index.js
 | Captcha Bypass | ✅ |
 | Captcha Solver | meh |
 | Tinggal tidur? | gas |
-| Auto Pay Spotify | ✅ |
-| Retry Failed Payment | ✅ |
+| Auto Pay Spotify | Removed |
+| Retry Failed Payment | Removed |
 
 ## Authors
 
